@@ -55,11 +55,11 @@ def predict_sentiment(classifier, text):
 # Load REST API
 app = Flask(__name__)
 
-print "Loading Flask web app..."
+print "Loading REST API..."
 
 @app.route('/')
 def hello_world():
-  return render_template("index.html")
+  return "API only"
 
 @app.route('/predict', methods=['POST'])
 def predict_post():
