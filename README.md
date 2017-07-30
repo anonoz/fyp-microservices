@@ -13,11 +13,13 @@ These microservices have been Dockerized for your convenience. Running the comma
 
 ```
 # may need sudo to run
-$ docker run -p 6001:6001 -it anonoz/fyp-microservices python skipgram.py
+$ docker run -p 6001:6001 -it anonoz/fyp-skipgram:0.0.1
 
 # if you want to run both at the same time, open a new terminal and run this
-$ docker run -p 6002:6002 -it anonoz/fyp-microservices python dbow.py
+$ docker run -p 6002:6002 -it anonoz/fyp-dbow:0.0.1
 ```
+
+If you want to let them run in background without taking up the terminal, replace `-it` with `-d`.
 
 In case you want to build the Docker image on your own, run:
 
@@ -29,7 +31,7 @@ Then run the commands in the snippet above the above one, replacing `anonoz/fyp-
 
 ## API
 
-```
+```json
 POST /predict
 
 {
