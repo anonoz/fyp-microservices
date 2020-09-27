@@ -3,7 +3,7 @@ from gensim.models import Doc2Vec
 from keras.models import load_model
 from bs4 import BeautifulSoup
 from text_tokenizer import tokenize
-from sklearn.externals import joblib
+import joblib
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import re
@@ -16,16 +16,16 @@ ffnn_model_file = "models/ffnn-dbow-100d.h5"
 svm_clf_file = "models/svm-dbow-100d.pkl"
 rf_clf_file = "models/rf-dbow-100d.pkl"
 
-print "Loading doc2vec..."
+print("Loading doc2vec...")
 d2v_model = Doc2Vec.load(doc2vec_model_file)
 
-print "Loading feedforward neural network..."
+print("Loading feedforward neural network...")
 ffnn = load_model(ffnn_model_file)
 
-print "Loading SVM..."
+print("Loading SVM...")
 svm = joblib.load(svm_clf_file)
 
-print "Loading Random Forest..."
+print("Loading Random Forest...")
 rf = joblib.load(rf_clf_file)
 
 # The prediction function
@@ -55,7 +55,7 @@ def predict_sentiment(classifier, text):
 # Load REST API
 app = Flask(__name__)
 
-print "Loading REST API..."
+print("Loading REST API...")
 
 @app.route('/')
 def hello_world():
