@@ -36,7 +36,7 @@ Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==2.2.5
 nltk==3.5
-numpy==1.11.2
+numpy==1.15.0
 oauthlib==3.1.0
 opt-einsum==2.3.2
 pandas==0.24.2
@@ -71,7 +71,7 @@ tensorflow-estimator==2.3.0
 termcolor==1.1.0
 Theano==0.8.2
 tornado==5.1.1
-tqdm==4.49.0
+tqdm==4.50.0
 traitlets==4.3.3
 urllib3==1.25.10
 wcwidth==0.2.5
